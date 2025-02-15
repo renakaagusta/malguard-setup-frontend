@@ -106,11 +106,11 @@ const Home: NextPage = () => {
 
   return (
     <main>
-      <Dialog open={isAlertSetupOpen}>
+      <Dialog open={isAlertSetupOpen} onOpenChange={setIsAlertSetupOpen}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Success</DialogTitle>
-            <DialogDescription>Please confirm the transaction setup in your safe account dashboard</DialogDescription>
+            <DialogDescription>Please confirm the transaction setup in your safe account dashboard and refresh the page</DialogDescription>
           </DialogHeader>
         </DialogContent>
       </Dialog>
