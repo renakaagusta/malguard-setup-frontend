@@ -6,26 +6,25 @@ import { Card } from "@/components/card/card";
 import ClientWrapper from "@/components/wrapper/client-wrapper";
 import { wagmiConfig } from '@/configs/wagmi';
 
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { simulateContract } from "@wagmi/core";
-import { AlertTriangle, ArrowUpCircle, CheckCircle, Clock, Shield } from "lucide-react";
-import type { NextPage } from "next";
-import {
-  useAccount,
-  useWriteContract,
-  usePublicClient
-} from "wagmi";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/dialog/dialog";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { ArrowRight, Info } from "lucide-react"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/dialog/dialog";
-import { useEffect, useState, useCallback } from "react";
+} from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
-import { getAddress } from "viem"
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { simulateContract } from "@wagmi/core";
+import { ArrowRight, Info, Shield } from "lucide-react";
+import type { NextPage } from "next";
+import { useCallback, useEffect, useState } from "react";
+import { getAddress } from "viem";
+import {
+  useAccount,
+  usePublicClient,
+  useWriteContract
+} from "wagmi";
 
 const Home: NextPage = () => {
   const publicClient = usePublicClient();

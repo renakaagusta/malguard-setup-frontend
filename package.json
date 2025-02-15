@@ -31,7 +31,6 @@
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "dotenv": "^16.4.7",
-    "graphql-request": "^7.1.0",
     "lucide-react": "^0.445.0",
     "luxon": "^3.5.0",
     "next": "^14.0.4",

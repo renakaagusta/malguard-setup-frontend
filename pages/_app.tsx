@@ -1,21 +1,20 @@
-import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
+import { Toaster } from "@/components/toaster/toaster";
 import { wagmiConfig } from "@/configs/wagmi";
 import {
-  Chain,
   darkTheme,
   RainbowKitProvider
 } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { WagmiProvider } from "wagmi";
 import { arbitrumSepolia } from "wagmi/chains";
 import "../styles/globals.css";
-import { Toaster } from "@/components/toaster/toaster";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-const queryClient = new QueryClient();
+// Create a client
+const queryClient = new QueryClient()
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
